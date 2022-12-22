@@ -3,7 +3,7 @@
 
 "use strict";
 
-const { app, BrowserWindow } = require('electron');
+import { app, BrowserWindow, BluetoothDevice } from 'electron';
 
 
 function createWindow() {
@@ -15,7 +15,7 @@ function createWindow() {
    // Device scans start with calling Bluetooth.requestDevice(...) on the renderer side.  
    // When devices are found, this event is triggered.  We can use this event to present 
    // a device picker to the user, or we can automaically pick something.
-   win.webContents.on('select-bluetooth-device', (event, devices, callback) => {
+   win.webContents.on('select-bluetooth-device', (event: Event, devices: BluetoothDevice[], callback: Function) => {
       event.preventDefault();
 
       // just pick the first device discovered (requestDevice() handles filtering)

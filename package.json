@@ -2,7 +2,7 @@
    "name": "typescript",
    "version": "1.0.0",
    "description": "dummy program to learn typescript",
-   "main": "main.js",
+   "main": "build/main.js",
    "scripts": {
       "build": "tsc",
       "lint": "eslint main.js",
