@@ -27,8 +27,10 @@
    "build": {
       "appId": "TypeScript",
       "files": [
-         "src/**/*",
-         "build/**/*.js"
+         "src/**/*.js",
+         "!src/**/*.test.js",
+         "build/**/*.js",
+         "!build/**/*test.js"
       ]
    }
 }
