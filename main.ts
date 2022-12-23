@@ -15,13 +15,13 @@ function createWindow() {
    // Device scans start with calling Bluetooth.requestDevice(...) on the renderer side.  
    // When devices are found, this event is triggered.  We can use this event to present 
    // a device picker to the user, or we can automaically pick something.
-   win.webContents.on('select-bluetooth-device', bluetoothSelected);
+   win.webContents.on('select-bluetooth-device', handleBluetoothSelect);
 
    win.loadFile('index.html');
 }
 
 
-function bluetoothSelected(event: Event, devices: BluetoothDevice[], callback: (deviceId: string) => void) {
+function handleBluetoothSelect(event: Event, devices: BluetoothDevice[], callback: (deviceId: string) => void) {
    event.preventDefault();
 
    // just pick the first device discovered (requestDevice() handles filtering)
