@@ -5,7 +5,7 @@
    "main": "build/main.js",
    "scripts": {
       "build": "tsc",
-      "lint": "eslint main.ts",
+      "lint": "eslint *.ts *.js",
       "test": "jest",
       "start": "electron .",
       "install": "electron-rebuild",
