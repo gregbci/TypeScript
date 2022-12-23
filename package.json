@@ -26,7 +26,6 @@
    },
    "build": {
       "appId": "TypeScript",
-      "extends": null,
       "files": [
          "src/**/*",
          "build/**/*.js"
