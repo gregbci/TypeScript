@@ -9,9 +9,13 @@ function percentError(start, last) {
    return result;
 }
 
-describe('User tests', () => {
+describe('Dummy tests', () => {
 
-   test('Can initialize a new User object', () => {
+   test('Calculating a percentage', () => {
       expect(percentError(10, 1)).toBe(90.0);
+   });
+
+   test('Cannot calculate percent with invaid input', () => {
+      expect(percentError(-10, 1)).toBe(undefined);
    });
 });

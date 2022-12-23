@@ -17,7 +17,7 @@ function createWindow() {
    // a device picker to the user, or we can automaically pick something.
    win.webContents.on('select-bluetooth-device', handleBluetoothSelect);
 
-   win.loadFile('index.html');
+   win.loadFile('src/window.html');
 }
 
 
