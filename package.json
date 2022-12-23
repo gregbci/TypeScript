@@ -6,7 +6,7 @@
    "scripts": {
       "build": "tsc",
       "lint": "eslint *.ts *.js",
-      "test": "jest",
+      "test": "jest *.test.js build/*.test.js",
       "start": "electron .",
       "install": "electron-rebuild",
       "package": "electron-builder --publish never",
@@ -17,6 +17,7 @@
    "license": "ISC",
    "devDependencies": {
       "@electron/rebuild": "^3.2.10",
+      "@types/jest": "^29.2.4",
       "@typescript-eslint/eslint-plugin": "^5.47.0",
       "@typescript-eslint/parser": "^5.47.0",
       "electron": "^21.3.3",
