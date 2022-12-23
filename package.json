@@ -14,8 +14,6 @@
    "license": "ISC",
    "devDependencies": {
       "@types/jest": "^29.2.4",
-      "@typescript-eslint/eslint-plugin": "^5.47.0",
-      "@typescript-eslint/parser": "^5.47.0",
       "electron": "^22.0.0",
       "electron-builder": "^23.6.0",
       "eslint": "^8.30.0",
@@ -31,6 +29,6 @@
       "files": [
          "src/**/*",
          "build/**/*.js"
-       ]
+      ]
    }
 }
