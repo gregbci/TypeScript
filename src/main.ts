@@ -5,6 +5,9 @@
 
 import { app, BrowserWindow, BluetoothDevice } from 'electron';
 
+const Greg = require('./settings/greg');
+//import Greg from 'greg';
+
 
 function createWindow() {
    const win = new BrowserWindow({
@@ -32,6 +35,10 @@ function handleBluetoothSelect(event: Event, devices: BluetoothDevice[], callbac
 
 app.whenReady().then(() => {
    createWindow();
+
+   // dummy action to test included modules
+   let greg = new Greg();
+   greg.sayHello();
 
    app.on('activate', () => {
       if (BrowserWindow.getAllWindows().length === 0) {
